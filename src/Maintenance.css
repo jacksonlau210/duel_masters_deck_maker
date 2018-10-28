@@ -1,0 +1,19 @@
+.Maintain-container
+{
+    min-height: 100vh;
+}
+
+.Maintain-msg
+{
+    color: white !important;
+}
+
+.DM-logo
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    min-width: 250px;
+    max-width: 450px;
+}

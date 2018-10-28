@@ -1,5 +1,6 @@
 {
   "name": "duel_masters_deck_maker",
+  "homepage": "http://jacksonlau210.github.io/duel_masters_deck_maker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

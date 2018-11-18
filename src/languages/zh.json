@@ -1,0 +1,14 @@
+{
+    "btnCreateAccount": "註冊",
+    "btnForgetPassword": "忘記密碼?",
+    "btnGetNewPassword": "獲取新密碼",
+    "btnSignInInstead": "返回登錄",
+    "btnSignIn": "登錄",
+    "btnSignUp": "註冊",
+    "titleForgetPassword": "復原帳戶",
+    "titleSignIn": "登錄",
+    "titleSignUp": "註冊",
+    "txtEmail": "電子郵件",
+    "txtPassword": "密碼",
+    "txtUsername": "用戶名"    
+}

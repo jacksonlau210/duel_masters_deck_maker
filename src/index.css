@@ -1,11 +1,19 @@
 body 
 {
-  background-color: #363636;
+  background-image: url("./images/login_background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #eeeeee !important;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:lang(ja) {font-family: "Meiryo"}
+:lang(zh) {font-family: "Heiti"}
 
 html, body
 {
@@ -16,4 +24,20 @@ code
 {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.Fullpage-container
+{
+  min-height: 100vh;
+}
+
+.Login-logo
+{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 70%;
+    min-width: 250px;
+    max-width: 450px;
 }

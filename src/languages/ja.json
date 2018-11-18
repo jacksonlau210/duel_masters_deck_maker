@@ -1,0 +1,14 @@
+{
+    "btnCreateAccount": "アカウント登録",
+    "btnForgetPassword": "アカウントを忘れた",
+    "btnGetNewPassword": "新しいパスワードを取得する",
+    "btnSignInInstead": "サインインする",
+    "btnSignIn": "サインイン",
+    "btnSignUp": "登録",
+    "titleForgetPassword": "アカウントを忘れた場合",
+    "titleSignIn": "サインイン",
+    "titleSignUp": "アカウント登録",
+    "txtEmail": "電子メール",
+    "txtPassword": "パスワード",
+    "txtUsername": "ユーザー名"    
+}

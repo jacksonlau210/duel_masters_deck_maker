@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import 'typeface-roboto';
-import Maintenance from './Maintenance';
-import App from './App';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import DmAuthenticator from './authentication/DmAuthenticator';
+import DmIntlProvider from './languages/DmIntlProvider';
 import * as serviceWorker from './serviceWorker';
+import DMTheme from './theme.json';
 
-ReactDOM.render(<Maintenance />, document.getElementById('root'));
+const theme = createMuiTheme(DMTheme);
+
+ReactDOM.render(<MuiThemeProvider theme={theme}><DmIntlProvider><DmAuthenticator /></DmIntlProvider></MuiThemeProvider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

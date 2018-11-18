@@ -1,0 +1,14 @@
+{
+    "btnCreateAccount": "Create Account",
+    "btnForgetPassword": "Forget Password?",
+    "btnGetNewPassword": "Get New Password",
+    "btnSignInInstead": "Sign In Instead",
+    "btnSignIn": "Sign In",
+    "btnSignUp": "Sign Up",
+    "titleForgetPassword": "Forget Password",
+    "titleSignIn": "Sign In",
+    "titleSignUp": "Sign Up",
+    "txtEmail": "Email",
+    "txtPassword": "Password",
+    "txtUsername": "Username"    
+}

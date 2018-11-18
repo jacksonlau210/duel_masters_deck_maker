@@ -1,0 +1,31 @@
+{
+    "palette": {
+        "type": "dark",
+        "primary": {
+            "light": "#66ffa6",
+            "main": "#00e676",
+            "dark": "#00b248",
+            "contrastText": "#eeeeee"
+        },
+        "secondary": {
+            "light": "#ffffb0",
+            "main": "#ffe57f",
+            "dark": "#cab350",
+            "contrastText": "#263238"
+        }
+    },
+    "typography": {
+        "fontFamily": [
+            "Roboto",
+            "Arial"
+        ],
+        "useNextVariants": true
+    },
+    "overrides": {
+        "MuiButton": {
+            "textPrimary": {
+                "color": "#eeeeee"
+            }
+        }
+    }
+}

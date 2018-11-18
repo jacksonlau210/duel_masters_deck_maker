@@ -9,9 +9,9 @@ class Maintenance extends Component
     render() {
         return(
             <div className="Maintenance">
-                <Grid container className="Maintain-container" alignItems="center" alignContent="center">
+                <Grid container className="Fullpage-container" alignItems="center" alignContent="center">
                     <Grid item xs={12} >
-                        <img src={dmLogo} className="DM-logo" alt="logo" />
+                        <img src={dmLogo} className="Login-logo" alt="logo" />
                     </Grid>
                     <Grid item xs={12}>
                         <Typography className="Maintain-msg" variant="h5" align="center">Site is under maintenance.</Typography>

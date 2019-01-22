@@ -1,7 +1,7 @@
 {
   "main.css": "/duel_masters_deck_maker/static/css/main.0fd3fa1f.chunk.css",
-  "main.js": "/duel_masters_deck_maker/static/js/main.bdd47117.chunk.js",
-  "main.js.map": "/duel_masters_deck_maker/static/js/main.bdd47117.chunk.js.map",
+  "main.js": "/duel_masters_deck_maker/static/js/main.fbaba12f.chunk.js",
+  "main.js.map": "/duel_masters_deck_maker/static/js/main.fbaba12f.chunk.js.map",
   "static/js/1.7e88a658.chunk.js": "/duel_masters_deck_maker/static/js/1.7e88a658.chunk.js",
   "static/js/1.7e88a658.chunk.js.map": "/duel_masters_deck_maker/static/js/1.7e88a658.chunk.js.map",
   "runtime~main.js": "/duel_masters_deck_maker/static/js/runtime~main.626e661a.js",
@@ -12,6 +12,6 @@
   "static/media/dm__icon.png": "/duel_masters_deck_maker/static/media/dm__icon.3bf9ba8e.png",
   "static/css/main.0fd3fa1f.chunk.css.map": "/duel_masters_deck_maker/static/css/main.0fd3fa1f.chunk.css.map",
   "index.html": "/duel_masters_deck_maker/index.html",
-  "precache-manifest.d9b143ec1638170da3a70d793f405e94.js": "/duel_masters_deck_maker/precache-manifest.d9b143ec1638170da3a70d793f405e94.js",
+  "precache-manifest.956cec5d55831450e7f31395b663effc.js": "/duel_masters_deck_maker/precache-manifest.956cec5d55831450e7f31395b663effc.js",
   "service-worker.js": "/duel_masters_deck_maker/service-worker.js"
 }

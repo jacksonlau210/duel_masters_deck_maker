@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/duel_masters_deck_maker/precache-manifest.956cec5d55831450e7f31395b663effc.js"
+  "/duel_masters_deck_maker/precache-manifest.55c507eb05c443c4c3eb81f20c3eba47.js"
 );
 
 workbox.clientsClaim();

@@ -8,8 +8,14 @@ import SignUp from './SignUp';
 import ForgetPassword from './ForgetPassword';
 import VerifSignInDialog from './VerifSignInDialog';
 import VerifForgetPasswordDialog from './VerifForgetPasswordDialog';
-import App from '../App';
+import { withRouter } from 'react-router-dom';
 import AWS_Config from '../config/aws-config.json';
+
+AWS_Config.API.endpoints[0].custom_header = async () => {
+    let token = (await Auth.currentSession()).idToken.jwtToken;
+    // console.log(token);
+    return { Authorization: token };
+}
 Amplify.configure(AWS_Config);
 
 class DmAuthenticator extends Component
@@ -27,15 +33,12 @@ class DmAuthenticator extends Component
             showVerifCodeDialog: false,
             showVerifPasswordCodeDialog: false
         };
-
-        this.checkUserLogin();
     }
 
     signIn = (email, password) => {
         Auth.signIn(email, password)
             .then(user => {
-                this.setState({authuser: user});
-                this.changeState('authenticated');
+                this.props.history.push('/');
             })
             .catch(err => {
                 this.setState({childError: err})
@@ -69,13 +72,6 @@ class DmAuthenticator extends Component
         }
     }
 
-    signOut = () => {
-        Auth.signOut()
-            .then(data => {
-                this.changeState('signIn');
-            })
-    }
-
     forgetPassword = (email) => {
 
         // we only want to run when input does not look like email
@@ -94,7 +90,8 @@ class DmAuthenticator extends Component
     verifySignUpCode = (code) => {
         Auth.confirmSignUp(this.state.authuser.username, code)
             .then(data => {
-                this.setState({showVerifCodeDialog: false, authState: 'authenticated'});
+                this.setState({showVerifCodeDialog: false});
+                this.props.history.push('/');
             })
             .catch(err => this.setState({verificationSignInError: err}));
     }
@@ -110,12 +107,6 @@ class DmAuthenticator extends Component
 
     changeState = (targetAuthState) => {
         this.setState({authState: targetAuthState});
-    }
-
-    checkUserLogin = () => {
-        Auth.currentAuthenticatedUser()
-            .then(user => this.changeState('authenticated'))
-            .catch(err => this.changeState('signIn'));
     }
 
     render()
@@ -134,13 +125,11 @@ class DmAuthenticator extends Component
                                     switch(authObject.state.authState) 
                                     {
                                         case 'signIn':
-                                            return <SignIn changeState={authObject.changeState} awsSignIn={authObject.signIn} errObject={authObject.state.childError} changeLanguage={authObject.props.changeLanguage}/>;
+                                            return <SignIn changeState={authObject.changeState} awsSignIn={authObject.signIn} errObject={authObject.state.childError} />;
                                         case 'signUp':
                                             return <SignUp changeState={authObject.changeState} awsSignUp={authObject.signUp} errObject={authObject.state.childError}/>;
                                         case 'forgetPassword':
                                             return <ForgetPassword changeState={authObject.changeState} awsForgetPassword={authObject.forgetPassword} errObject={authObject.state.childError}/>;
-                                        case 'authenticated':
-                                            return <App awsSignOut={authObject.signOut}/>;
                                         default:
                                             return null;
                                     }
@@ -156,4 +145,4 @@ class DmAuthenticator extends Component
     }
 }
 
-export default DmAuthenticator;
+export default withRouter(DmAuthenticator);

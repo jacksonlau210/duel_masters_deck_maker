@@ -72,7 +72,7 @@ class SignIn extends Component {
     render() 
     {
         return(
-            <form>
+            <form onSubmit={(e) => { e.preventDefault(); this.props.awsSignIn(this.state.email, this.state.password); } }>
                 <Grid container direction="column" spacing={16}>
                     <Grid item>
                         <Grid container>
@@ -82,7 +82,7 @@ class SignIn extends Component {
                     <Grid item>
                         <Grid container alignItems="flex-end">
                             <Grid item xs={2}>
-                                <AccountCircle />
+                                <AccountCircle color="primary"/>
                             </Grid>
                             <Grid item xs={10}>
                                 <TextField id="email"
@@ -100,7 +100,7 @@ class SignIn extends Component {
                     <Grid item>
                         <Grid container alignItems="flex-end">
                             <Grid item xs={2}>
-                                <Lock />
+                                <Lock color="primary"/>
                             </Grid>
                             <Grid item xs={10}>
                                 <FormControl fullWidth={true} error={this.state.passwordErrorMsg !== ""}>
@@ -126,12 +126,8 @@ class SignIn extends Component {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item>
-                        <Grid container>
-                            <Grid item xs={12}>
-                                <Button variant="contained" color="primary" fullWidth={true} onClick={() => this.props.awsSignIn(this.state.email, this.state.password)} ><FormattedMessage id="btnSignIn"/></Button>
-                            </Grid>
-                        </Grid>
+                    <Grid item xs={12}>
+                        <Button variant="contained" color="secondary" type="submit" fullWidth={true} ><FormattedMessage id="btnSignIn"/></Button>
                     </Grid>
                     <Grid item>
                         <Grid container justify="center" alignItems="center">
@@ -140,19 +136,6 @@ class SignIn extends Component {
                             </Grid>
                             <Grid item>
                                 <Button color="primary" onClick={() => this.props.changeState("signUp")}><FormattedMessage id="btnCreateAccount"/></Button>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid item>
-                        <Grid container justify="center" alignItems="center">
-                            <Grid item>
-                                <Button color="primary" onClick={() => this.props.changeLanguage("en")}>EN</Button>
-                            </Grid>
-                            <Grid item>
-                                <Button color="primary" onClick={() => this.props.changeLanguage("zh")}>ZH</Button>
-                            </Grid>
-                            <Grid item>
-                                <Button color="primary" onClick={() => this.props.changeLanguage("ja")}>JA</Button>
                             </Grid>
                         </Grid>
                     </Grid>

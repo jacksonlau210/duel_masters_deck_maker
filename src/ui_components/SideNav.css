@@ -1,0 +1,52 @@
+#sidenav 
+{
+    background-color: #424242;
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    padding-top: 10px;
+    text-align: center;
+}
+
+#bottomSideNav
+{
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+}
+
+#dmIcon
+{
+    width: 48px;
+    height: 48px;
+}
+
+/* Medium Devices */
+@media screen and (max-width: 1280px) 
+{
+    #sidenav 
+    {
+      width: 50px;
+      padding-top: 5px;
+    }
+
+    #bottomSideNav
+    {
+        bottom: 10px;
+    }
+}
+
+/* Small Devices */
+@media screen and (max-width: 600px) 
+{
+    #sidenav 
+    {
+      width: 0px;
+    }
+}
+

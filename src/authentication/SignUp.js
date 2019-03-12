@@ -47,7 +47,7 @@ class SignUp extends Component
             }
             else if(errorObj.message.includes("equal to 6") || errorObj.message.includes("long enough"))
             {
-                this.setState({passwordErrorMsg: "Password length must at least has 8 characters"});
+                this.setState({passwordErrorMsg: "Password must be at least 8 characters"});
             }
             else if(errorObj.code === "InvalidPasswordException" && errorObj.message.includes("uppercase")) 
             {
@@ -98,7 +98,7 @@ class SignUp extends Component
     render() 
     {
         return(
-            <form>
+            <form onSubmit={(e) => { e.preventDefault(); this.props.awsSignUp(this.state.email, this.state.username, this.state.password)}} >
                 <Grid container direction="column" spacing={16}>
                     <Grid item>
                         <Grid container>
@@ -108,7 +108,7 @@ class SignUp extends Component
                     <Grid item>
                         <Grid container alignItems="flex-end">
                             <Grid item xs={2}>
-                                <Email />
+                                <Email color="primary"/>
                             </Grid>
                             <Grid item xs={10}>
                                 <TextField id="email"
@@ -126,7 +126,7 @@ class SignUp extends Component
                     <Grid item>
                         <Grid container alignItems="flex-end">
                             <Grid item xs={2}>
-                                <AccountCircle />
+                                <AccountCircle color="primary"/>
                             </Grid>
                             <Grid item xs={10}>
                                 <TextField id="username"
@@ -144,7 +144,7 @@ class SignUp extends Component
                     <Grid item>
                         <Grid container alignItems="flex-end">
                             <Grid item xs={2}>
-                                <Lock />
+                                <Lock color="primary"/>
                             </Grid>
                             <Grid item xs={10}>
                                 <FormControl fullWidth={true} error={this.state.passwordErrorMsg !== ""}>
@@ -173,8 +173,7 @@ class SignUp extends Component
                     <Grid item>
                         <Grid container>
                             <Grid item xs={12}>
-                                <Button variant="contained" color="primary" fullWidth={true} 
-                                    onClick={() => this.props.awsSignUp(this.state.email, this.state.username, this.state.password)} ><FormattedMessage id="titleSignUp"/></Button>
+                                <Button variant="contained" color="secondary" type="submit" fullWidth={true} ><FormattedMessage id="titleSignUp"/></Button>
                             </Grid>
                         </Grid>
                     </Grid>

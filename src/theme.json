@@ -1,17 +1,16 @@
 {
     "palette": {
-        "type": "dark",
         "primary": {
+            "light": "#2F3D45",
+            "main": "#232E33",
+            "dark": "#263238",
+            "contrastText": "#eeeeee"
+        },
+        "secondary": {
             "light": "#66ffa6",
             "main": "#00e676",
             "dark": "#00b248",
             "contrastText": "#eeeeee"
-        },
-        "secondary": {
-            "light": "#ffffb0",
-            "main": "#ffe57f",
-            "dark": "#cab350",
-            "contrastText": "#263238"
         }
     },
     "typography": {
@@ -25,6 +24,83 @@
         "MuiButton": {
             "textPrimary": {
                 "color": "#eeeeee"
+            }
+        },
+        "MuiTypography": {
+            "colorTextPrimary": {
+                "color": "#eeeeee"
+            },
+            "colorTextSecondary": {
+                "color": "#263238"
+            }
+        },
+        "MuiInput": {
+            "underline": {
+                "&:after": {
+                    "border-bottom": "2px solid #263238"
+                }
+            }
+        },
+        "MuiInputLabel": {
+            "formControl": {
+                "color": "#263238"
+            }
+        },
+        "MuiAppBar": {
+            "colorPrimary": {
+                "background-color": "#424242"
+            }
+        },
+        "MuiDrawer": {
+            "paper": {
+                "background-color": "#424242"
+            }
+        },
+        "MuiMenuItem": {
+            "root": {
+                "color": "#263238"
+            }
+        },
+        "MuiCardHeader": {
+            "title": {
+                "color": "#263238"
+            },
+            "content": {
+                "color": "#263238"
+            }
+        },
+        "MuiIconButton": {
+            "colorPrimary": {
+                "color": "#eeeeee"
+            },
+            "colorSecondary": {
+                "color": "#263238"
+            }
+        },
+        "MuiSvgIcon": {
+            "colorPrimary": {
+                "color": "#eeeeee"
+            },
+            "colorSecondary": {
+                "color": "#263238"
+            }
+        },
+        "MuiFab": {
+            "primary": {
+                "background-color": "#263238"
+            }
+        },
+        "MuiLinearProgress": {
+            "colorPrimary": {
+                "background-color": "#00b248"
+            },
+            "barColorPrimary": {
+                "background-color": "#00e676"
+            }
+        },
+        "MuiCheckbox": {
+            "colorPrimary": {
+                "color": "#263238"
             }
         }
     }

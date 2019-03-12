@@ -47,7 +47,7 @@ class ForgetPassword extends Component
     render() 
     {
         return(
-            <form>
+            <form onSubmit={(e) => { e.preventDefault(); this.props.awsForgetPassword(this.state.email)}} >
                 <Grid container direction="column" spacing={16}>
                     <Grid item>
                         <Grid container>
@@ -57,7 +57,7 @@ class ForgetPassword extends Component
                     <Grid item>
                         <Grid container alignItems="flex-end">
                             <Grid item xs={2}>
-                                <AccountCircle />
+                                <AccountCircle color="primary"/>
                             </Grid>
                             <Grid item xs={10}>
                                 <TextField id="email"
@@ -75,7 +75,7 @@ class ForgetPassword extends Component
                     <Grid item>
                         <Grid container>
                             <Grid item xs={12}>
-                                <Button variant="contained" color="primary" fullWidth={true} onClick={() => this.props.awsForgetPassword(this.state.email)}><FormattedMessage id="btnGetNewPassword"/></Button>
+                                <Button variant="contained" color="secondary" type="submit" fullWidth={true} ><FormattedMessage id="btnGetNewPassword"/></Button>
                             </Grid>
                         </Grid>
                     </Grid>

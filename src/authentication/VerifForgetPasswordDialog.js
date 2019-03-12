@@ -100,12 +100,9 @@ class VerifForgetPasswordDialog extends Component {
                 open={this.props.open}
                 onExit={() => this.handleClose()}
                 aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">Enter New Password and Verification Code</DialogTitle>
+                <DialogTitle id="form-dialog-title"><FormattedMessage id="titleVerifyForgetPs"/></DialogTitle>
                 <DialogContent>
-                    <DialogContentText>
-                        Verification code will send to your email soon. Please enter the new password and the code in 
-                        below text field.
-                    </DialogContentText>
+                    <DialogContentText><FormattedMessage id="txtVerifyForgetPsCodePrompt"/></DialogContentText>
                     <Grid container spacing={16}>
                         <Grid item xs={12} lg={6}>
                             <FormControl fullWidth={true} error={this.state.passwordErrorMsg !== ""}>
@@ -131,7 +128,7 @@ class VerifForgetPasswordDialog extends Component {
                         </Grid>
                         <Grid item xs={12} lg={6}> 
                             <TextField id="code"
-                                label="Verification Code"
+                                label={<FormattedMessage id="txtVerifyCode"/>}
                                 value={this.state.code} 
                                 error={this.state.codeErrorMsg !== ""}
                                 helperText={this.state.codeErrorMsg}
@@ -142,7 +139,7 @@ class VerifForgetPasswordDialog extends Component {
                     </Grid>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={() => this.props.awsVerifyPasswordCode(this.state.password, this.state.code)} color="primary">Submit</Button>
+                    <Button onClick={() => this.props.awsVerifyPasswordCode(this.state.password, this.state.code)} ><FormattedMessage id="btnConfirm"/></Button>
                 </DialogActions>
             </Dialog>
         );

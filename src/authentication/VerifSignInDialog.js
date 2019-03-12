@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {FormattedMessage} from 'react-intl';
 import { Button, TextField, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText } from '@material-ui/core';
 
 class VerifSignInDialog extends Component {
@@ -61,15 +62,12 @@ class VerifSignInDialog extends Component {
                 open={this.props.open}
                 onExit={() => this.handleClose()}
                 aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">Enter Verification Code</DialogTitle>
+                <DialogTitle id="form-dialog-title"><FormattedMessage id="titleVerifySignIn"/></DialogTitle>
                 <DialogContent>
-                    <DialogContentText>
-                        Verification code will send to your email soon. Please enter it in 
-                        below text field.
-                    </DialogContentText>
+                    <DialogContentText><FormattedMessage id="txtVerifySignInCodePrompt"/></DialogContentText>
                     <TextField
                         autoFocus
-                        label="Verification Code"
+                        label={<FormattedMessage id="txtVerifyCode"/>}
                         value={this.state.code} 
                         error={this.state.codeErrorMsg !== ""}
                         helperText={this.state.codeErrorMsg}
@@ -78,8 +76,8 @@ class VerifSignInDialog extends Component {
                         onChange={(event) => this.handleTextChange(event)}/>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={() => this.props.awsResendCode()} color="primary">Resend Code</Button>
-                    <Button onClick={() => this.props.awsVerifyCode(this.state.code)} color="primary">Submit</Button>
+                    <Button onClick={() => this.props.awsResendCode()} ><FormattedMessage id="btnResendCode"/></Button>
+                    <Button onClick={() => this.props.awsVerifyCode(this.state.code)} ><FormattedMessage id="btnConfirm"/></Button>
                 </DialogActions>
             </Dialog>
         );

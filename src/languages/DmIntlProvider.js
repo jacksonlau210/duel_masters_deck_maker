@@ -8,54 +8,34 @@ import intlMessagesEN from './en.json';
 import intlMessagesZH from './zh.json';
 import intlMessagesJA from './ja.json';
 
+const intlMessageMap = {
+    en: intlMessagesEN,
+    zh: intlMessagesZH,
+    ja: intlMessagesJA
+};
+
 class DmIntlProvider extends Component
 {
     constructor(props)
     {
         super(props);
         addLocaleData([...en,...zh,...ja]);
+        let defaultLangCode = localStorage.getItem('langCode');
         this.state = {
-            locale: 'en',
-            messages: intlMessagesEN 
+            locale: (defaultLangCode===null)?'en':defaultLangCode
         };
-        this.changeLanguage = this.changeLanguage.bind(this);
     }
 
-    changeLanguage(langCode)
-    {
+    changeLanguage = (langCode) => {
         document.getElementsByTagName("html")[0].setAttribute("lang", langCode);
-        switch(langCode)
-        {
-            case "en":
-                this.setState({
-                    locale: langCode,
-                    messages: intlMessagesEN
-                });
-                break;
-            case "zh":
-                this.setState({
-                    locale: langCode,
-                    messages: intlMessagesZH
-                });
-                break;
-            case "ja":
-                this.setState({
-                    locale: langCode,
-                    messages: intlMessagesJA
-                });
-                break;
-            default:
-                this.setState({
-                    locale: langCode,
-                    messages: intlMessagesEN
-                });
-        }
+        this.setState({ locale: langCode });
     }
 
     render()
     {
+        const { locale } = this.state;
         return(
-            <IntlProvider locale={ this.state.locale } messages={this.state.messages}>
+            <IntlProvider locale={ locale } messages={intlMessageMap[locale]}>
                 {React.cloneElement(this.props.children, { changeLanguage: this.changeLanguage })}
             </IntlProvider>
         );

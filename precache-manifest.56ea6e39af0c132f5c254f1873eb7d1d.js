@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/duel_masters_deck_maker/static/js/runtime~main.626e661a.js"
   },
   {
-    "revision": "4fc863850e7bfa9caefd",
-    "url": "/duel_masters_deck_maker/static/js/main.4fc86385.chunk.js"
+    "revision": "2f6a8e586b0aff03a2e1",
+    "url": "/duel_masters_deck_maker/static/js/main.2f6a8e58.chunk.js"
   },
   {
     "revision": "b384bed5a4d95064d39c",
     "url": "/duel_masters_deck_maker/static/js/1.b384bed5.chunk.js"
   },
   {
-    "revision": "4fc863850e7bfa9caefd",
+    "revision": "2f6a8e586b0aff03a2e1",
     "url": "/duel_masters_deck_maker/static/css/main.5eb10e9a.chunk.css"
   },
   {
-    "revision": "fa803764453504e810e24f4c24f5a515",
+    "revision": "c08d98a617f9fdf2fe61c29bc094ce7c",
     "url": "/duel_masters_deck_maker/index.html"
   }
 ];

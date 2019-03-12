@@ -32,7 +32,6 @@ export function getPlayerDecks()
         dispatch(resetDeckList());
         return Auth.currentAuthenticatedUser()
             .then(user => {
-                console.log(user);
                 return API.get("Duel Masters API", "playerDecks/user/"+user.username)
                 .then(response => {
                     console.log(response);
@@ -86,7 +85,6 @@ export function createPlayerDeck(deckName)
         dispatch(startAPICall());
         return Auth.currentAuthenticatedUser()
             .then(user => {
-                console.log(user);
                 let myInit = {
                     body: {name: deckName, userId: user.username}
                 };

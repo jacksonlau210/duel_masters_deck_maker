@@ -1,4 +1,4 @@
-# duel_masters_deck_maker
+# Duel Masters Deck Maker
 Duel Masters Deck Maker Webapp using Serverless RESTful Card API<br />
 [Link to webapp](https://jacksonlau210.github.io/duel_masters_deck_maker/)<br />
 Front-end stack: React, Redux, Material-UI, AWS Cognito<br />

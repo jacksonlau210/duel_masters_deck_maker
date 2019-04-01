@@ -1,9 +1,10 @@
 # Duel Masters Deck Maker
-Duel Masters Deck Maker Webapp using Serverless RESTful Card API<br />
+React Deck Maker Webapp using Serverless RESTful Card API<br />
 [Link to webapp](https://jacksonlau210.github.io/duel_masters_deck_maker/)<br />
 Front-end stack: React, Redux, Material-UI, AWS Cognito<br />
 Back-end stack: MongoDB Atlas, AWS API Gateway, AWS Lambda, Node.js<br />
-*Webapp UI language is confgurable but card content is in Japanese*<br />
+*RESTful Card API is not accessible to public. It is for private use only*<br />
+*Webapp UI language is configurable (English, Chinese or Japanese) but card content is in Japanese only*<br />
 ## How to insert card to deck
 1. Click "Product Gallery" at the bottom or on the sidebar
 ![Screenshot showing "Product Gallery" button locations](https://raw.githubusercontent.com/jacksonlau210/duel_masters_deck_maker/master/README_image/insert_card1.jpg "Product Gallery button locations")
@@ -23,4 +24,4 @@ Back-end stack: MongoDB Atlas, AWS API Gateway, AWS Lambda, Node.js<br />
 5. Click Save button at the bottom right corner
 ![Screenshot showing "Save" button locations](https://raw.githubusercontent.com/jacksonlau210/duel_masters_deck_maker/master/README_image/remove_card2.jpg "Save button locations")
 
-Feel free to email jacksonlau210@gmail.com for any webapp usage or development questions
+Feel free to email jacksonlau210@gmail.com for any webapp usage or development question

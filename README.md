@@ -1,6 +1,5 @@
 # Duel Masters Deck Maker
 React Deck Maker Webapp using Serverless RESTful Card API<br />
-[Link to webapp](https://jacksonlau210.github.io/duel_masters_deck_maker/)<br />
 Front-end stack: React, Redux, Material-UI, AWS Cognito<br />
 Back-end stack: MongoDB Atlas, AWS API Gateway, AWS Lambda, Node.js<br />
 *RESTful Card API is not accessible to public. It is for private use only*<br />
